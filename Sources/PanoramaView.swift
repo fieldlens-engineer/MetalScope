@@ -27,6 +27,12 @@ public final class PanoramaView: UIView, SceneLoadable {
 
     public weak var sceneRendererDelegate: SCNSceneRendererDelegate?
 
+    public var followDeviceOrientation: Bool = true {
+        didSet {
+            setNeedsResetRotation()
+        }
+    }
+
     public lazy var orientationNode: OrientationNode = {
         let node = OrientationNode()
         let mask = CategoryBitMask.all.subtracting(.rightEye)
@@ -167,6 +173,10 @@ extension PanoramaView: OrientationIndicatorDataSource {
 
 extension PanoramaView: SCNSceneRendererDelegate {
     public func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
+        defer { sceneRendererDelegate?.renderer?(renderer, updateAtTime: time) }
+
+        guard followDeviceOrientation else { return }
+
         var disableActions = false
 
         if let provider = orientationNode.deviceOrientationProvider, provider.shouldWaitDeviceOrientation(atTime: time) {
@@ -183,8 +193,6 @@ extension PanoramaView: SCNSceneRendererDelegate {
 
         SCNTransaction.commit()
         SCNTransaction.unlock()
-
-        sceneRendererDelegate?.renderer?(renderer, updateAtTime: time)
     }
 
     public func renderer(_ renderer: SCNSceneRenderer, didApplyAnimationsAtTime time: TimeInterval) {

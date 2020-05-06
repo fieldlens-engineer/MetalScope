@@ -46,14 +46,8 @@ final class ViewController: UIViewController {
         ]
         NSLayoutConstraint.activate(constraints)
 
-        // double tap to reset rotation
-        let doubleTapGestureRecognizer = UITapGestureRecognizer(target: panoramaView, action: #selector(PanoramaView.setNeedsResetRotation(_:)))
-        doubleTapGestureRecognizer.numberOfTapsRequired = 2
-        panoramaView.addGestureRecognizer(doubleTapGestureRecognizer)
-
         // single tap to toggle play/pause
         let singleTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(togglePlaying))
-        singleTapGestureRecognizer.require(toFail: doubleTapGestureRecognizer)
         panoramaView.addGestureRecognizer(singleTapGestureRecognizer)
 
         self.panoramaView = panoramaView
@@ -69,14 +63,7 @@ final class ViewController: UIViewController {
         self.player = player
 
         // loop
-        if #available(iOS 10, *) {
-            playerLooper = AVPlayerLooper(player: player, templateItem: playerItem)
-        } else {
-            player.actionAtItemEnd = .none
-            playerObservingToken = NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: playerItem, queue: nil) { _ in
-                player.seek(to: kCMTimeZero, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimeZero)
-            }
-        }
+        playerLooper = AVPlayerLooper(player: player, templateItem: playerItem)
 
         player.play()
     }
@@ -98,7 +85,7 @@ final class ViewController: UIViewController {
         return .lightContent
     }
 
-    func togglePlaying() {
+    @objc func togglePlaying() {
         guard let player = player else {
             return
         }

@@ -10,7 +10,6 @@
 		BF1452DF1E320BAC0042598E /* SceneLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1452DE1E320BAC0042598E /* SceneLoadable.swift */; };
 		BF1453061E321CE30042598E /* CategoryBitMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1453051E321CE30042598E /* CategoryBitMask.swift */; };
 		BF1F1D381EAF6A53004AEEB4 /* PanoramaPanGestureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8922F1E2F761600FA9129 /* PanoramaPanGestureManager.swift */; };
-		BF46F09A1EADDEDA00F5CB58 /* Deprecations+Removals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46F0991EADDEDA00F5CB58 /* Deprecations+Removals.swift */; };
 		BF46F0A11EADE9C300F5CB58 /* ImageLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46F0A01EADE9C300F5CB58 /* ImageLoadable.swift */; };
 		BF46F0A31EADEA4600F5CB58 /* VideoLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46F0A21EADEA4600F5CB58 /* VideoLoadable.swift */; };
 		BF603F551E41B57600A28013 /* OrientationIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF603F541E41B57600A28013 /* OrientationIndicator.swift */; };
@@ -49,7 +48,6 @@
 /* Begin PBXFileReference section */
 		BF1452DE1E320BAC0042598E /* SceneLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SceneLoadable.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BF1453051E321CE30042598E /* CategoryBitMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CategoryBitMask.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		BF46F0991EADDEDA00F5CB58 /* Deprecations+Removals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Deprecations+Removals.swift"; sourceTree = "<group>"; };
 		BF46F0A01EADE9C300F5CB58 /* ImageLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoadable.swift; sourceTree = "<group>"; };
 		BF46F0A21EADEA4600F5CB58 /* VideoLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoLoadable.swift; sourceTree = "<group>"; };
 		BF603F541E41B57600A28013 /* OrientationIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrientationIndicator.swift; sourceTree = "<group>"; };
@@ -57,8 +55,8 @@
 		BF9B15B51E44B4B1004CC8CE /* KeyValueObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueObserver.swift; sourceTree = "<group>"; };
 		BFA89A791E310401005A3529 /* VideoScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = VideoScene.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BFA89A7D1E3108D0005A3529 /* ImageScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ImageScene.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		BFAB12FB1E35B82900A1642C /* StereoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = StereoView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		BFAB12FE1E35B94400A1642C /* StereoRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = StereoRenderer.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BFAB12FB1E35B82900A1642C /* StereoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = StereoView.swift; sourceTree = "<group>"; };
+		BFAB12FE1E35B94400A1642C /* StereoRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = StereoRenderer.swift; sourceTree = "<group>"; };
 		BFAB13001E35B97500A1642C /* Eye.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Eye.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BFAB13021E35B9DA00A1642C /* ViewerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ViewerModel.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BFAB13041E35B9EB00A1642C /* ViewerParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ViewerParameters.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -66,7 +64,7 @@
 		BFAB13081E35BE9800A1642C /* ScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ScreenModel.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BFAB130A1E35D1E900A1642C /* StereoParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = StereoParameters.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BFAB130E1E35E7C600A1642C /* StereoCameraNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = StereoCameraNode.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		BFAB13101E35EE0D00A1642C /* StereoScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = StereoScene.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BFAB13101E35EE0D00A1642C /* StereoScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = StereoScene.swift; sourceTree = "<group>"; };
 		BFAB13121E361B3700A1642C /* StereoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = StereoViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BFAB13151E363ACD00A1642C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFB891781E2E013400FA9129 /* MetalScope.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MetalScope.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,7 +73,7 @@
 		BFB8918B1E2E037100FA9129 /* CVError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CVError.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BFB8918D1E2E039800FA9129 /* PlayerItemRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PlayerItemRenderer.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BFB8918F1E2E03A300FA9129 /* PlayerRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PlayerRenderer.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		BFB8919E1E2E083000FA9129 /* PanoramaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PanoramaView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BFB8919E1E2E083000FA9129 /* PanoramaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PanoramaView.swift; sourceTree = "<group>"; };
 		BFB891A11E2E08FC00FA9129 /* DeviceOrientationProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DeviceOrientationProvider.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BFB891A31E2E090A00FA9129 /* Rotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Rotation.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BFB891A51E2E109A00FA9129 /* Rotation+CoreMotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "Rotation+CoreMotion.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -158,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				BFB8917B1E2E013400FA9129 /* MetalScope.h */,
-				BF46F0991EADDEDA00F5CB58 /* Deprecations+Removals.swift */,
 				BFDF48B81E8A52E200FC7A74 /* PanoramaView */,
 				BFAB12FD1E35B82D00A1642C /* StereoView */,
 				BFB891921E2E04EB00FA9129 /* OrientationNode */,
@@ -273,6 +270,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = BFB8916E1E2E013400FA9129;
@@ -323,7 +321,6 @@
 				BFAB130B1E35D1E900A1642C /* StereoParameters.swift in Sources */,
 				BFAB12FF1E35B94400A1642C /* StereoRenderer.swift in Sources */,
 				BF9B15B61E44B4B1004CC8CE /* KeyValueObserver.swift in Sources */,
-				BF46F09A1EADDEDA00F5CB58 /* Deprecations+Removals.swift in Sources */,
 				BFAB13091E35BE9800A1642C /* ScreenModel.swift in Sources */,
 				BFFE23891E409046006097A1 /* MediaFormat.swift in Sources */,
 				BFAB13031E35B9DA00A1642C /* ViewerModel.swift in Sources */,
@@ -389,12 +386,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -442,10 +440,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -467,11 +466,12 @@
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 0.17.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eje-c.MetalScope";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -489,10 +489,11 @@
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 0.17.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eje-c.MetalScope";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

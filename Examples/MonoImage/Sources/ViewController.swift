@@ -39,11 +39,6 @@ final class ViewController: UIViewController {
         ]
         NSLayoutConstraint.activate(constraints)
 
-        // double tap to reset rotation
-        let doubleTapGestureRecognizer = UITapGestureRecognizer(target: panoramaView, action: #selector(PanoramaView.setNeedsResetRotation(_:)))
-        doubleTapGestureRecognizer.numberOfTapsRequired = 2
-        panoramaView.addGestureRecognizer(doubleTapGestureRecognizer)
-
         self.panoramaView = panoramaView
 
         panoramaView.load(#imageLiteral(resourceName: "Sample"), format: .mono)

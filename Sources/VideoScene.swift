@@ -38,11 +38,7 @@ extension VideoScene {
     }
 
     fileprivate var preferredPixelFormat: MTLPixelFormat {
-        if #available(iOS 10, *) {
-            return .bgra8Unorm_srgb
-        } else {
-            return .bgra8Unorm
-        }
+        return .bgra8Unorm_srgb
     }
 }
 
@@ -75,7 +71,7 @@ public final class MonoSphericalVideoScene: MonoSphericalMediaScene, VideoScene 
 
     public init(renderer: PlayerRenderer) {
         self.renderer = renderer
-        commandQueue = renderer.device.makeCommandQueue()
+        commandQueue = renderer.device.makeCommandQueue()!
         super.init()
         renderLoop.resume()
     }
@@ -115,7 +111,7 @@ public final class MonoSphericalVideoScene: MonoSphericalMediaScene, VideoScene 
         }
 
         do {
-            let commandBuffer = (commandQueue ?? self.commandQueue).makeCommandBuffer()
+            let commandBuffer = (commandQueue ?? self.commandQueue).makeCommandBuffer()!
             try renderer.render(atHostTime: time, to: texture, commandBuffer: commandBuffer)
             commandBuffer.commit()
         } catch let error as CVError {
@@ -163,7 +159,7 @@ public final class StereoSphericalVideoScene: StereoSphericalMediaScene, VideoSc
 
     public init(renderer: PlayerRenderer) {
         self.renderer = renderer
-        commandQueue = renderer.device.makeCommandQueue()
+        commandQueue = renderer.device.makeCommandQueue()!
         super.init()
         renderLoop.resume()
     }
@@ -206,13 +202,13 @@ public final class StereoSphericalVideoScene: StereoSphericalMediaScene, VideoSc
             return
         }
 
-        let commandBuffer = (commandQueue ?? self.commandQueue).makeCommandBuffer()
+        let commandBuffer = (commandQueue ?? self.commandQueue).makeCommandBuffer()!
 
         do {
             try renderer.render(atHostTime: time, to: playerTexture, commandBuffer: commandBuffer)
 
             func copyPlayerTexture(region: MTLRegion, to sphereTexture: MTLTexture) {
-                let blitCommandEncoder = commandBuffer.makeBlitCommandEncoder()
+                let blitCommandEncoder = commandBuffer.makeBlitCommandEncoder()!
                 blitCommandEncoder.copy(
                     from: playerTexture,
                     sourceSlice: 0,

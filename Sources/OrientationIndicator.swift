@@ -15,7 +15,7 @@ public protocol OrientationIndicatorDataSource: class {
 }
 
 public protocol OrientationIndicator {
-    weak var dataSource: OrientationIndicatorDataSource? { get set }
+    var dataSource: OrientationIndicatorDataSource? { get set }
 
     func updateOrientation()
 }
@@ -117,28 +117,14 @@ public final class OrientationIndicatorLayer: CALayer, OrientationIndicator {
 
         let fovInDegree: Double
 
-        if #available(iOS 11, *) {
-            switch camera.projectionDirection {
-            case .horizontal:
-                fovInDegree = Double(camera.fieldOfView)
-            case .vertical:
-                fovInDegree = Double(camera.fieldOfView) * viewportRatio
-            }
-        } else {
-            if camera.xFov != 0 && camera.yFov != 0 {
-                let fovRatio = camera.xFov / camera.yFov
-                if fovRatio > viewportRatio {
-                    fovInDegree = camera.xFov
-                } else {
-                    fovInDegree = camera.yFov * viewportRatio
-                }
-            } else if camera.xFov != 0 {
-                fovInDegree = camera.xFov
-            } else if camera.yFov != 0 {
-                fovInDegree = camera.yFov * viewportRatio
-            } else {
-                fovInDegree = 60 * viewportRatio
-            }
+        switch camera.projectionDirection {
+        case .horizontal:
+            fovInDegree = Double(camera.fieldOfView)
+        case .vertical:
+            fovInDegree = Double(camera.fieldOfView) * viewportRatio
+        @unknown default:
+            assertionFailure("Looks like new cases are in SCNCameraProjectionDirection enum. Used default value!")
+            fovInDegree = Double(camera.fieldOfView)
         }
 
         fov = Float(fovInDegree) / 180 * .pi

@@ -63,13 +63,7 @@ public final class PlayerItemRenderer {
             settings[key] = value
         }
 
-        let videoOutput: AVPlayerItemVideoOutput
-        if #available(iOS 10.0, *) {
-            videoOutput = AVPlayerItemVideoOutput(outputSettings: settings)
-        } else {
-            videoOutput = AVPlayerItemVideoOutput(pixelBufferAttributes: settings)
-        }
-
+        let videoOutput: AVPlayerItemVideoOutput = AVPlayerItemVideoOutput(outputSettings: settings)
         try self.init(device: device, videoOutput: videoOutput)
     }
 
@@ -121,8 +115,8 @@ public final class PlayerItemRenderer {
         let destinationOrigin = MTLOriginMake(0, 0, 0)
 
         let blitCommandEncoder = commandBuffer.makeBlitCommandEncoder()
-        blitCommandEncoder.copy(from: sourceTexture, sourceSlice: 0, sourceLevel: 0, sourceOrigin: sourceOrigin, sourceSize: sourceSize, to: texture, destinationSlice: 0, destinationLevel: 0, destinationOrigin: destinationOrigin)
-        blitCommandEncoder.endEncoding()
+        blitCommandEncoder?.copy(from: sourceTexture, sourceSlice: 0, sourceLevel: 0, sourceOrigin: sourceOrigin, sourceSize: sourceSize, to: texture, destinationSlice: 0, destinationLevel: 0, destinationOrigin: destinationOrigin)
+        blitCommandEncoder?.endEncoding()
     }
 
     public func hasNewPixelBuffer(atHostTime time: TimeInterval) -> Bool {
